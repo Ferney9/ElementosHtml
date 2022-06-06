@@ -1,0 +1,550 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+
+nav .mobile {
+  display: none;
+}
+
+nav .logo {
+  min-width: 250px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 20px 25px;
+}
+
+nav a:hover {
+  color: black;
+  background-color: rgb(255, 230, 0);
+}
+
+nav .desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+nav .mobile .header img {
+  width: 48px;
+  border-radius: 50%;
+}
+
+nav .desktop img {
+  width: 48px;
+  border-radius: 50%;
+}
+
+nav .desktop .primary,
+nav .desktop .secondary {
+  display: flex;
+  margin-right: 5%;
+}
+
+nav .secondary.full {}
+
+nav .secondary.mini {
+  display: none;
+}
+
+@media screen and (max-width: 894px) {
+  nav .logo {
+    min-width: 100px;
+  }
+
+  nav .secondary.full {
+    display: none;
+  }
+
+  nav .secondary.mini {
+    display: block;
+  }
+
+  nav .secondary.mini .submenu {
+    position: absolute;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 516px) {
+  nav .desktop {
+    display: none;
+  }
+
+  nav .mobile {
+    display: block;
+  }
+
+  nav .mobile .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav .mobile .header .logo {
+    flex: 1;
+    text-align: center;
+  }
+
+  nav .mobile .header .more button {
+    padding: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+  }
+
+  nav .mobile .header .more button:hover {
+    background-color: white;
+    color: black;
+  }
+}
+
+--------- Targeta ---------------- body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cards {
+  display: flex;
+  width: 130%;
+  padding: 50px;
+}
+
+.card {
+  background: rgb(216, 204, 33);
+  background: linear-gradient(90deg,
+      rgb(255, 217, 0) 1%,
+      rgb(212, 131, 25) 100%);
+  color: rgb(10, 10, 10);
+  width: 300px;
+  height: 350px;
+  border-radius: 10px;
+  padding: 30px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.3), -4px 0 10px rgba(0, 0, 0, 0.2),
+    -5px 0 10px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.3s ease;
+}
+
+.card a {
+  color: rgb(2, 2, 2);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  color: rgb(241, 237, 237);
+}
+
+.card:hover {
+  margin-right: 80px;
+  transform: rotate(3deg) translateY(-15px);
+}
+
+.card .header {
+  flex: 1;
+}
+
+.card .card .header .date {
+  padding: 10px 0;
+}
+
+.card .header .title {
+  font-size: 28px;
+}
+
+.card .footer .author a {
+  display: flex;
+  align-items: center;
+}
+
+.card .footer .author a span {
+  margin-left: 5%;
+}
+
+.card .footer img {
+  width: 48px;
+  border-radius: 50%;
+}
+
+
+card[class*="element"] {
+  margin-left: -100px;
+}
+
+.element-1:hover,
+.element-2:hover {
+  margin-left: -130px;
+}
+
+--------- Tabla --------------- body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 800px;
+  margin: 100px auto;
+}
+
+td {
+  border: solid 1px #ccc;
+  padding: 5px;
+}
+
+tr:nth-child(even) {
+  background-color: #eee;
+}
+
+td:nth-child(n + 3),
+td:nth-child(n + 3) {
+  text-align: center;
+}
+
+tbody tr:hover {
+  background-color: rgb(230, 240, 87) !important;
+}
+
+thead {
+  background-color: black;
+  color: white;
+  position: sticky;
+  top: 0%;
+}
+
+--------- Notificatiòn --------------- .material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 30px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  -webkit-font-smoothing: antialiased;
+
+  text-rendering: optimizeLegibility;
+
+  -moz-osx-font-smoothing: grayscale;
+
+  font-feature-settings: "liga";
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.notification {
+  width: 48px;
+  margin: 0;
+
+  animation: ring 4s 0.7s ease-in-out infinite;
+  transform-origin: 50% 4px;
+}
+
+.notification .count {
+  --size: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: red;
+  color: white;
+  border: solid 2px white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size);
+  height: var(--size);
+  max-width: var(--size);
+  max-height: var(--size);
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  1% {
+    transform: rotate(30deg);
+  }
+
+  3% {
+    transform: rotate(-28deg);
+  }
+
+  5% {
+    transform: rotate(34deg);
+  }
+
+  7% {
+    transform: rotate(-32deg);
+  }
+
+  9% {
+    transform: rotate(30deg);
+  }
+
+  11% {
+    transform: rotate(-28deg);
+  }
+
+  13% {
+    transform: rotate(26deg);
+  }
+
+  15% {
+    transform: rotate(-24deg);
+  }
+
+  17% {
+    transform: rotate(22deg);
+  }
+
+  19% {
+    transform: rotate(-20deg);
+  }
+
+  21% {
+    transform: rotate(18deg);
+  }
+
+  23% {
+    transform: rotate(-16deg);
+  }
+
+  25% {
+    transform: rotate(14deg);
+  }
+
+  27% {
+    transform: rotate(-12deg);
+  }
+
+  29% {
+    transform: rotate(10deg);
+  }
+
+  31% {
+    transform: rotate(-8deg);
+  }
+
+  33% {
+    transform: rotate(6deg);
+  }
+
+  35% {
+    transform: rotate(-4deg);
+  }
+
+  37% {
+    transform: rotate(2deg);
+  }
+
+  39% {
+    transform: rotate(-1deg);
+  }
+
+  41% {
+    transform: rotate(1deg);
+  }
+
+  43% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+--------- Login ---------------
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(216, 211, 135);
+}
+
+
+
+.form-container {
+  background: rgb(216, 204, 33);
+  background: linear-gradient(90deg,
+      rgb(255, 217, 0) 1%,
+      rgb(212, 131, 25) 100%);
+  width: 80%;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 90vh;
+
+  display: flex;
+  align-items: center;
+}
+
+.form-container .login-container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.form-container .login-container>h2 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.form-container .login-container>p,
+.form-container .login-container span {
+  color: #555;
+  text-align: center;
+}
+
+.form-container .login-container label {
+  display: block;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.form-container .login-container input.input {
+  display: block;
+  box-sizing: border-box;
+  padding: 10px;
+  border: solid 1px #ccc;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.form-container .login-container input.input:focus {
+  outline: solid 1px rgb(0, 153, 255);
+}
+
+.form-container .login-container .providers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.form-container .login-container button.btn,
+.form-container .login-container input.btn {
+  border: none;
+  padding: 15px 0;
+  width: 100%;
+  font-weight: bolder;
+  display: block;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.form-container .login-container input.btn.btn-login {
+  background-color: black;
+  color: white;
+}
+
+.form-container .login-container button.btn.google-provider {
+  background-color: white;
+  color: black;
+  border: solid 1px #ccc;
+}
+
+.form-container .login-container button.btn.facebook-provider {
+  background-color: rgb(10, 82, 216);
+  color: white;
+  border: 0;
+}
+
+.form-container .login-container button.btn.twitter-provider {
+  background-color: rgb(10, 168, 216);
+  color: white;
+  border: 0;
+}
+
+.form-container .login-container button.btn.google-provider:hover {
+  background-color: rgb(212, 212, 212);
+  color: black;
+}
+
+.form-container .login-container button.btn.facebook-provider:hover {
+  background-color: rgb(6, 61, 163);
+  color: white;
+}
+
+.form-container .login-container button.btn.twitter-provider:hover {
+  background-color: rgb(7, 133, 172);
+  color: white;
+}
+
+.form-container .login-container .options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-container .welcome-screen-container {
+  background-color: black;
+  height: 100%;
+  width: 50%;
+}
+
+@media screen and (max-width: 1357px) {
+  .form-container {
+    width: 95%;
+  }
+
+  .form-container .login-container {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .form-container .welcome-screen-container {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .form-container .login-container {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .form-container .welcome-screen-container {
+    width: 0%;
+  }
+}
